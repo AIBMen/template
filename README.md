@@ -24,6 +24,7 @@ I'm using RStudio and R because that's what I'm most familiar with at the moment
 * [Chapters 9, 11, 12](https://happygitwithr.com/https-pat) walk you through creating an access token on GitHub (this is what you use instead of your GitHub account password to access the remote server on GitHub. I created a token for HTTPS because this seemed simpler.) and using git through RStudio. For me, this just worked. I installed git, RStudio recognized it automatically, and when I selected File > New Project, the option to create a new version-controlled project from a repository showed up. [Chapters 13 and 14](https://happygitwithr.com/rstudio-see-git) have some guidance and troubleshooting steps if this doesn't happen.
 
 ![Version Control using git in RStudio](./results/new_git_project_RStudio.png)
+
 *You should see something like this when you start a new project in RStudio*
 
 * Some parts of the walkthrough describe R commands and functions you can use to do various GitHub things like create tokens. For example:
@@ -104,13 +105,10 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 > Comments can be used more effectively to explain why you might have written code in a certain way. For example, you might explain to other analysts and developers why a section of your code doesn’t follow standard practices, perhaps because the typical method didn’t work. This type of comment can help to clarify your decision-making process, without needing to describe the individual steps taken.
 > In short, comments explaining why you made programming choices will help your future self and other developers to understand your intentions.
 
-### Quality Assurance
+### Quality Assurance Checklist
 
 * Quality assurance checklist from [the quality assurance of code for analysis and research guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html).
 * This is more detailed than we need. I've cut a few things, but there's still a number of items that probably won't get used or need more thought before trying to do. Think of this as a general template you can copy into the readme for your project and pare down as needed. 
-
-#### Example Checklist
-* To do: Edit and pare down for our needs
 * https://best-practice-and-impact.github.io/qa-of-code-guidance/checklists.html
 
 #### Modular code
@@ -136,7 +134,7 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 - [ ] All functions and classes are documented to describe what they do, what inputs they take and what they return.
 - [ ] Python code is [documented using docstrings](https://www.python.org/dev/peps/pep-0257/). R code is [documented using `roxygen2` comments](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html). (Not sure what these are and have never used them.)
 
-### Project documentation
+#### Project documentation
 
 - [ ] A README file details the purpose of the project, basic installation instructions, and examples of usage.
 - [ ] The extent of analytical quality assurance conducted on the project is clearly documented.
@@ -144,19 +142,19 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 - [ ] Copyright and licenses are specified for both documentation and code.
 - [ ] Instructions for how to cite the project are given.
 
-### Version control
+#### Version control
 
 - [ ] Code is [version controlled using Git](https://git-scm.com/).
 - [ ] Code is committed regularly, preferably when a discrete unit of work has been completed.
 - [ ] An appropriate branching strategy is defined and used throughout development.
 
-### Configuration
+#### Configuration
 
 - [ ] Credentials and other secrets are not written in code but are configured as environment variables.
 - [ ] Configuration is clearly separated from code used for analysis, so that it is simple to identify and update.
 - [ ] The configuration used to generate particular outputs, releases and publications is recorded.
 
-### Data management
+#### Data management
 
 - [ ] All data for analysis are stored in an open format, so that specific software is not required to access them.
 - [ ] Input data are stored safely and are treated as read-only.
@@ -164,11 +162,11 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 - [ ] All input data is documented in a data register, including where they come from and their importance to the analysis.
 - [ ] Outputs from your analysis are disposable and are regularly deleted and regenerated while analysis develops. Your analysis code is able to reproduce them at any time.
 
-### Peer review
+#### Peer review
 
 - [ ] Peer review is conducted and recorded near to the code. Merge or pull requests are used to document review, when relevant.
 
-### Testing
+#### Testing
 
 - [ ] Core functionality is unit tested as code. See [`pytest` for Python](https://docs.pytest.org/en/stable/) and [`testthat` for R](https://testthat.r-lib.org/). 
 - [ ] Code based tests are run regularly, ideally being automated using continuous integration.
@@ -176,19 +174,19 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 - [ ] Informal tests are recorded near to the code.
 - [ ] Stakeholder or user acceptance sign-offs are recorded near to the code.
 
-### Dependency management
+#### Dependency management
 
 - [ ] Required passwords, secrets and tokens are documented, but are stored outside of version control.
 - [ ] Required libraries and packages are documented, including their versions.
 - [ ] Working operating system environments are documented.
 - [ ] Example configuration files are provided.
 
-### Logging
+#### Logging
 
 - [ ] Misuse or failure in the code produces informative error messages.
 - [ ] Code configuration is recorded when the code is run.
 
-### Project management
+#### Project management
 
 - [ ] The roles and responsibilities of team members are clearly defined.
 - [ ] An issue tracker (e.g GitHub Project, Trello or Jira) is used to record development tasks.
