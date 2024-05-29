@@ -4,8 +4,6 @@ output: html_document
 date: "2024-05-29"
 ---
 
-
-
 # Project Template README
 
 ## What's it for in general?
@@ -44,7 +42,25 @@ Share Your Project Determine the repository’s privacy settings based on your p
 
 8. Use Pull Requests. For systematic management of contributions during collaborations, employ pull requests to review and merge changes efficiently.
 
-## Went to ... and some philosophy that I copied from Pew
+## Getting Started with Git 
+__Links__
+* https://happygitwithr.com/git-client
+* https://gitforwindows.org/
+* https://desktop.github.com/
+
+### Steps (Work in progress)
+* Downloading git
+* Downloading github desktop
+* Getting an HTTPS token via Github website. Six mo. expiration. Scope to repo, workflow, and user
+* Create desktop-tutorial or test repository under your own profile. 
+* Copy the HTTPs clone URL: https://github.com/ben-aibm/test.git
+* You can use the template repository
+* First create a new project on github from the template
+* Then start a new project in Rstudio and paste in the URL.
+
+![What git looks like in RStudio](./results/howto_git_RStudio.png)
+
+## When to ... and some philosophy that I copied from Pew
 
 ### When to commit
 However, the more difficult question is not how to write a commit message but when to create one. What is the appropriate level of granularity in analysis code?
