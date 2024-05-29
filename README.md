@@ -55,22 +55,25 @@ Sometimes what goes into a separate commit is obvious. For instance, maybe there
 
 ### When to branch
 
+
 * Also from [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)'s article on using GitHub for data analysis.
 * I think for now we probably won't do much of this, because we won't have multiple people working on a single analysis. But this is something we can start thinking about.
 
 > Another git concept we needed to adapt was branching. As we said, in software engineering, branches are used to add improvements to an application in production that often lives in the “main” branch. In research, the code is never really in “production” until the corresponding report or blog post has been published. In the process of building an analysis, researchers try different things, some of which will work and some of which will not. But those are not features or bugs. We thought it made more sense to think of the main branch as containing a version of analysis on which all researchers agree, and to think of branches starting from “main” as individual researchers’ proposed additions. In a very literal way, we think of merging code into the main branch as a discussion between co-authors. Thus, if a commit is an item on a to-do list, a branch is a section of a to-do list that accomplishes a specific goal — something like “explore a method of analysis to address a particular question in our research” or “respond to feedback about the project.” These are blocks on which researchers can work separately and which can be understood as proposed additions to a collective analysis.
 
+### ...And pull
+
+* A pull request is "a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase. Pull requests display the differences, or diffs, between the content in the source branch and the content in the target branch."
+* More info [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+* [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/) again.
+
 > The key idea is that branches define natural points for the people working on a project to get together and discuss whether the analysis is moving in the right direction. Consequently, merging a branch into “main” is a key step in our quality control process. We take advantage of the way GitHub structures collaboration. To merge a branch, the researcher opens a pull request, which is an interface for requesting a review on the branch’s changes before putting them into a place that contains the results we all agree on. This step enforces the idea of code in the “main” branch being a consensus among researchers.
+
 > The type of consensus that is required changes over the life of a project. Some pull requests only need to be scrolled through and checked for appropriate file structure and documentation. Others need more robust checks. For example, a script that starts a time-intensive data collection is something you want to get right the first time. Our approach to branches and pull requests accounts for this variation by outlining what information needs to be communicated when opening a pull request, as opposed to using specific standards for review.
 
 > This process also ensures that no research decision can be made by a single person and that all the code is viewed by at least two people. One person developing alone will inevitably make mistakes that two or more people developing in tandem will catch. Two people discussing research decisions together, as they are implemented, also results in better designs. Early and consistent review also helps us write better, cleaner and more legible code, which, in turn, makes it much easier for someone in the future to re-run the code and replicate the analysis.
 
 > Incorporating branches and pull requests into our workflow changed the pace and style of all our work. The branch-pull request-review process slows things down, but we think sacrificing some time to ensure quality is worth it. This process encodes a method of collaborative decision-making between all the researchers in the team. It becomes less of a review to ensure the code is flawless and more of a quick check to prevent headaches at the end of the project. In general, it provides an opportunity to take a moment to check in with collaborators: to discuss a new idea for approaching an analysis, confirm that a method is working or just make sure everyone is up to date on the current status of the project.
-
-### When to Pull
-
-* A pull request is "a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase. Pull requests display the differences, or diffs, between the content in the source branch and the content in the target branch."
-* More info [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 ### When to use Issues
 
@@ -114,7 +117,7 @@ Update README Regularly. Maintain an updated README to reflect your project’s 
 ### Quality Assurance Checklist
 
 * Quality assurance checklist from [the quality assurance of code for analysis and research guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html).
-* This is more detailed than we need. I've cut a few things, but there's still a number of items that probably won't get used or need more thought before trying to do. Think of this as a general template you can copy into the readme for your project and pare down as needed. 
+* This is more detailed than we need. I've cut a few things, but there's still a number of items that probably won't get used or need more thought before trying to do. Think of this as a general template you can copy into the readme for your project and pare down as needed. Use your judgment!
 * https://best-practice-and-impact.github.io/qa-of-code-guidance/checklists.html
 
 #### Modular code
