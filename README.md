@@ -45,7 +45,7 @@ However, I found this kind of confusing, and it's not really explained in the wa
 
 ### When to commit
 
-* From [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)'s article on using GitHub for data analysis.
+* From [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)'s article on using GitHub for data analysis:
 
 > However, the more difficult question is not how to write a commit message but when to create one. What is the appropriate level of granularity in analysis code?
 Sometimes what goes into a separate commit is obvious. For instance, maybe there is a problem caused by a call to a function that uses the wrong name. But more generally, when one is writing a script for data analysis, what is the best way to think about a discrete set of changes?
@@ -55,9 +55,8 @@ Sometimes what goes into a separate commit is obvious. For instance, maybe there
 
 ### When to branch
 
-
 * Also from [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)'s article on using GitHub for data analysis.
-* I think for now we probably won't do much of this, because we won't have multiple people working on a single analysis. But this is something we can start thinking about.
+* I think for now we probably won't do much of this, because we won't have multiple people working on a single analysis. But this is something we can start thinking about as it might make the whole analysis process more productive. Another person can easily come into a project in-progress and create a new branch in the repository to work on a separate analysis or with a dataset that they have particular expertise in which then gets folded back into the overall project all while the original person is still working on their part. 
 
 > Another git concept we needed to adapt was branching. As we said, in software engineering, branches are used to add improvements to an application in production that often lives in the “main” branch. In research, the code is never really in “production” until the corresponding report or blog post has been published. In the process of building an analysis, researchers try different things, some of which will work and some of which will not. But those are not features or bugs. We thought it made more sense to think of the main branch as containing a version of analysis on which all researchers agree, and to think of branches starting from “main” as individual researchers’ proposed additions. In a very literal way, we think of merging code into the main branch as a discussion between co-authors. Thus, if a commit is an item on a to-do list, a branch is a section of a to-do list that accomplishes a specific goal — something like “explore a method of analysis to address a particular question in our research” or “respond to feedback about the project.” These are blocks on which researchers can work separately and which can be understood as proposed additions to a collective analysis.
 
@@ -65,7 +64,7 @@ Sometimes what goes into a separate commit is obvious. For instance, maybe there
 
 * A pull request is "a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase. Pull requests display the differences, or diffs, between the content in the source branch and the content in the target branch."
 * More info [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-* [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/) again.
+* [Pew](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/) again:
 
 > The key idea is that branches define natural points for the people working on a project to get together and discuss whether the analysis is moving in the right direction. Consequently, merging a branch into “main” is a key step in our quality control process. We take advantage of the way GitHub structures collaboration. To merge a branch, the researcher opens a pull request, which is an interface for requesting a review on the branch’s changes before putting them into a place that contains the results we all agree on. This step enforces the idea of code in the “main” branch being a consensus among researchers.
 
